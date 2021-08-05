@@ -5,4 +5,4 @@ postgresql:
     - name: postgresql
     - enable: True
     - require:
-      - pkg: postgresql-server
+      - pkg: postgresql
