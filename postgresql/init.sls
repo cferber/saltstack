@@ -1,4 +1,3 @@
-  
 postgresql-server:
   pkg:
     - installed
