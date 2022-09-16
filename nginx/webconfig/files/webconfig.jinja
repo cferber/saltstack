@@ -1,0 +1,16 @@
+{# {%- set ipaddress  = salt['grains.get']('ip4_interfaces')['ens160'][0] -%} #}
+{# {%- set ipaddress  = salt['grains.get']('ip4_interfaces:ens160')[0] -%} #}
+{%- set ipaddress  = grains['ip4_interfaces']['ens160'][0] -%}
+
+server {
+    listen {{ipaddress}}:80;
+ 
+    root /var/www/custom;
+    index index.html index.htm;
+ 
+    server_name {{ipaddress}};
+ 
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
