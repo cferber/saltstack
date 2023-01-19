@@ -1,0 +1,7 @@
+{
+    "filestocreate": {
+        "filename1": "filename1",
+        "filename2": "filename2",
+        "filename3": "filename3"
+    }
+}
