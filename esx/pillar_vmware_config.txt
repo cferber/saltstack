@@ -1,0 +1,7 @@
+{
+    "vmware_config": {
+        "host": "vc03.space.local",
+        "password": "VMware1!",
+        "user": "administrator@vsphere.local"
+    }
+}
