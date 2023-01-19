@@ -1,7 +1,3 @@
-{% for filename,filedetails in pillar.get('filestocreate', {}).items() %}
-
-{{filename}}:
-  file.makedirs:
-    - path: c:\tmp\{{filename}}\
-    
-{% endfor %}
+test2:
+  file.directory:
+    - name: 'c:\tmp\test2'
