@@ -1,0 +1,19 @@
+{% set addomain = salt['grains.get']('addomain') -%}
+{% set adnetbiosdomain = salt['grains.get']('adnetbiosdomain') -%}
+{% set adsafepassword = salt['grains.get']('adsafepassword') -%}
+
+[DCINSTALL]
+
+InstallDNS=yes
+NewDomain=forest
+NewDomainDNSName={{addomain}}
+DomainNetBiosName={{adnetbiosdomain}}
+SiteName=Default-First-Site-Name
+ReplicaOrNewDomain=domain
+ForestLevel=3
+DomainLevel=3
+DatabasePath="%systemroot%\NTDS"
+LogPath="%systemroot%\NTDS"
+RebootOnCompletion=no
+SYSVOLPath="%systemroot%\SYSVOL"
+SafeModeAdminPassword={{adsafepassword}}
